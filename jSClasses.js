@@ -74,3 +74,63 @@ class MyName {
 
 let amarName = new MyName("Maker Shihab");
 console.log(MyName.hello(amarName));
+
+
+// Advance Concept
+
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+
+    getArea(){
+        throw new Error(`getArea() method must be implemeted`);
+    }
+
+    toString(){
+        return `This shape sah a color ${this.color}`;
+    }
+}
+
+class Circle extends Shape {
+    constructor(color, radious) {
+        super(color);
+        this.radious = radious;
+    }
+
+    getArea() {
+        return Math.PI * this.radious ** 2
+    }
+
+    toString() {
+        return `${super.toString()} and a radious of ${this.radious}`
+    }
+}
+
+
+class Rectangle extends Shape {
+    constructor(color, width, height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+    
+    getArea() {
+        return this.width * this.height;
+    }
+
+    toString() {
+        return `${super.toString()}, width of ${this.width}, and height of ${this.height}`
+    }
+}
+
+// Usage Example 
+
+const circle = new Circle('red', 5);
+
+console.log(circle.toString());
+console.log('Area:', circle.getArea());
+
+const rectangle = new Rectangle('blue', 6, 4);
+console.log(rectangle.toString());
+console.log('Area:', rectangle.getArea());
