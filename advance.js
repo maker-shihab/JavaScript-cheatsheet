@@ -200,3 +200,20 @@ console.log(friends2.indexOf("gias") == -1);
 // open libary api : https://openlibrary.org/works/OL45883W.json
 
 // university list : http://universities.hipolabs.com/search?country=United+States
+
+// const data = () => {
+//   fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       another(data.drinks);
+//     });
+// };
+// data();
+
+// const another = (data) => {
+//   console.log(data);
+// };
+// function quickCheck(arr, elem) {
+//     return arr.indexOf(elem) != -1;
+//   }
+//   console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
